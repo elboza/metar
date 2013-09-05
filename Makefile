@@ -21,6 +21,7 @@ dist:
 	mkdir ${DIST_DIR}
 	cp ${SRC} ${DIST_DIR}/
 	cp Makefile ${DIST_DIR}/
+	cp README.md ${DIST_DIR}/
 	tar -cvzf ${TARGET}-${VERSION}.tar.gz ${DIST_DIR}/
 	rm -f ./${DIST_DIR}/*
 	rmdir ${DIST_DIR}
