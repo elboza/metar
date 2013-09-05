@@ -1,13 +1,37 @@
 #!/usr/bin/perl
+
+use warnings;
 use strict;
 use Getopt::Long;
 use LWP::Simple;
 use File::Basename;
 
-$main::VERSION=0.1;
-$::appname=fileparse($0);;
-exit(main());
+$main::VERSION="0.2";
+$::appname=fileparse($0);
 
+sub show_version()
+{
+	print "v$main::VERSION\n";
+	exit;
+}
+sub usage()
+{
+	print "$::appname, metar and taf viewer, v $::VERSION, 2012 by Fernando Iazeolla\n";
+	print "this software is licensed under GPLv2\n";
+	print "usage: $::appname <options>\n";
+	print <<EOF;
+options:
+  --apt <ICAO>   -i <ICAO>   set iaco airport code
+  --decode       -d          decode
+  --help         -h          show this help
+  --verbose      -v          verbose
+  --version      -vv         show prog version
+  --taf          -f          show taf forecast
+  
+EOF
+	print "Example: $::appname -i lirf -f\n\n";
+	exit;
+}
 sub main()
 {
 	my $city=0;
@@ -23,18 +47,18 @@ sub main()
 	my @rr;
 
 	GetOptions(
-	'i=s'=>\$city,
-	'd'=>\$decode,
-	'v'=>\$verbose,
-	'h'=>\$help,
-	'f'=>\$forecast,
-	'version'=>\$version
+	'apt|i=s'=>\$city,
+	'decode|d'=>\$decode,
+	'verbose|v'=>\$verbose,
+	'help|h'=>\$help,
+	'taf|f'=>\$forecast,
+	'version|vv'=>\$version
 	) or die "incorrect usage! try $::appname -h\n";
 	
-	if($version) { show_version();}
-	if($help) { usage();}
-	if(!$city) {die "incorect usage! try $::appname -h\n";}
-	if($debug) {print "$city $decode $verbose $help $version\n";}
+	show_version if($version);
+	usage if($help);
+	die "incorect usage! try $::appname -h\n" if(!$city);
+	print "$city $decode $verbose $help $version\n" if($debug);
 	if($decode) {$metar=$metar."decoded/";} else {$metar=$metar."stations/";}
 	$city=uc($city);
 	$metar=$metar.$city.".TXT";
@@ -60,24 +84,5 @@ sub main()
 	}
 
 }
-sub usage()
-{
-	print "$::appname -metar and taf viewer- v $::VERSION, 2012 by Fernando Iazeolla\n";
-	print "this software is licensed under GPLv2\n";
-	print "usage: $::appname <options>\n";
-	print "optrions:\n";
-	print "      -i <ICAO>     set iaco airport code\n";
-	print "      -d            decode\n";
-	print "      -h            show this help\n";
-	print "      -v            verbose\n";
-	print "      --version     show prog version\n";
-	print "      -f            show taf forecast\n";
-	print "Example: $::appname -i lirf -f\n";
-	exit;
-}
-sub show_version()
-{
-	print "$::appname -metar and taf viewer-\nversion: $main::VERSION\n";
-	exit;
-}
 
+main;
