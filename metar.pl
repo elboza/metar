@@ -1,5 +1,9 @@
 #!/usr/bin/perl
 
+# Simple metar - command line.
+# author: Fernando Iazeolla
+# licence: GPLv2
+
 use warnings;
 use strict;
 use Getopt::Long;
