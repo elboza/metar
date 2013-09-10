@@ -1,0 +1,31 @@
+# $Id$
+
+PortSystem			1.0
+
+name				metar
+version				0.2
+categories			science
+platforms			darwin linux
+license				GPL-2+
+revision			1
+maintainers			gmail.com:fernando.iazeolla
+description			a simple command line metar and taf.
+long_description	${description}
+					
+homepage            http://github.com/elboza/metar
+master_sites        http://www.autistici.org/0xFE/software/releases/metar
+
+checksums           md5    38da1551523b8c8a08e19ce5bf616a40 \
+                    sha1    5db4022c113b453893fa10776ce2f1641926d676 \
+                    rmd160  1f7178c3d984b56f4ba96609bacf4145815e5da7
+
+worksrcdir			${name}
+use_configure		no
+
+build {}
+
+destroot {
+	xinstall -m 755 ${worksrcpath}/metar.pl ${destroot}${prefix}/bin/metar
+}
+
+
