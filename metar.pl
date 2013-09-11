@@ -3,6 +3,7 @@
 # Simple metar - command line.
 # author: Fernando Iazeolla
 # licence: GPLv2
+# web: http://github.com/elboza/metar
 
 use warnings;
 use strict;
