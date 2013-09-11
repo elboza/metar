@@ -15,9 +15,9 @@ long_description	${description}
 homepage            http://github.com/elboza/metar
 master_sites        http://www.autistici.org/0xFE/software/releases/metar
 
-checksums           md5    fc7e5377cc186ce832818672827726c1 \
-                    sha1    223efa0bade58edf283ceefa18b2f73b5a3e3dd4 \
-                    rmd160  68df7a807174195b9d0c210e0ba56432e0a59c45
+checksums           md5    c694636e3f402423b8de39eab3e6beec \
+                    sha1    4e8401f89a3db0434505633d9244e324b953daea \
+                    rmd160  28644bc6b2507352236b2e2cf8e0975724678b77
 
 worksrcdir			${name}
 use_configure		no
