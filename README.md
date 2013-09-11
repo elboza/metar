@@ -40,7 +40,7 @@ TAF LIRF 051700Z 0518/0624 VRB05KT 9999 SCT040
 #####web
 [metar project page](http://github.com/elboza/metar)
 
-####That's all falks
+####That's all falks!
 
 ```
  ______
