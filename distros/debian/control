@@ -1,0 +1,16 @@
+Source: metar
+Section: utilities
+Priority: extra
+Maintainer: Fernando Iazeolla <xnando@yahoo.it>
+Build-Depends: debhelper (>= 8.0.0), perl
+Standards-Version: 3.9.4
+Homepage: http://github.com/elboza/metar
+#Vcs-Git: git://git.debian.org/collab-maint/foo.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/foo.git;a=summary
+
+Package: metar
+Architecture: all
+Depends: ${misc:Depends}, perl
+Description: a simple command line metar and taf.
+ a simple command line metar and taf.
+
