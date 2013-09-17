@@ -7,7 +7,8 @@ version             0.2
 categories          science
 platforms           darwin linux
 license             GPL-2+
-revision            1
+revision            0
+supported_archs     noarch
 maintainers         gmail.com:fernando.iazeolla
 description         a simple command line metar and taf.
 long_description    ${description}
@@ -19,6 +20,7 @@ checksums           md5    c694636e3f402423b8de39eab3e6beec \
                     sha1    4e8401f89a3db0434505633d9244e324b953daea \
                     rmd160  28644bc6b2507352236b2e2cf8e0975724678b77
 
+depends_lib         port:p5-libwww-perl
 worksrcdir          ${name}
 use_configure       no
 
