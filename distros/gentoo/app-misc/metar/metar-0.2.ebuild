@@ -26,7 +26,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/perl"
+DEPEND="dev-lang/perl
+		dev-perl/libwww-perl"
 
 RDEPEND=""
 
@@ -35,11 +36,10 @@ src_unpack() {
         cd ${S}
 }
 
-src_compile() {
-    
-}
-	
+S=${WORKDIR}/${PN}
 src_install() {
-    cp ${S}/metar.pl ${D}/metar
+    elog "installing ${P}"
+	mkdir -p "${D}/usr/bin"
+	cp "${S}"/metar.pl "${D}"/usr/bin/metar
 }
 
