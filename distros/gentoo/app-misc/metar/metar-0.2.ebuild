@@ -13,7 +13,7 @@
 # mkdir -p /usr/local/portage/app-misc/metar
 # cp metar-0.2.ebuild /usr/local/portage/app-misc/metar/
 # cd /usr/local/portage/app-misc/metar
-# ebuild  ${DWARF}.ebuild digest
+# ebuild  ${METAR}.ebuild digest
 # echo PORTDIR_OVERLAY=/usr/local/portage >> /etc/make.conf
 # emerge metar
 
