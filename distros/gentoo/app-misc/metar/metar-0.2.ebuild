@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # metar custom ebuild by xnando
 # Distributed under the terms of the GNU General Public License v2
 # $Header:$
@@ -15,7 +15,7 @@
 # cd /usr/local/portage/app-misc/metar
 # ebuild  ${DWARF}.ebuild digest
 # echo PORTDIR_OVERLAY=/usr/local/portage >> /etc/make.conf
-# emerge dwarf
+# emerge metar
 
 DESCRIPTION="a simple command line metar and taf"
 HOMEPAGE="http://github.com/elboza/metar"
