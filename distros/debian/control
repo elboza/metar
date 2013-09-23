@@ -1,5 +1,5 @@
 Source: metar
-Section: utilities
+Section: utils
 Priority: extra
 Maintainer: Fernando Iazeolla <xnando@yahoo.it>
 Build-Depends: debhelper (>= 8.0.0), perl
@@ -11,6 +11,10 @@ Homepage: http://github.com/elboza/metar
 Package: metar
 Architecture: all
 Depends: ${misc:Depends}, perl
-Description: a simple command line metar and taf.
- a simple command line metar and taf.
+Description: simple command-line metar and taf.
+ Metar is a small utility that will download meteorological reports for
+ aviation from the NOAA HTTP server at weather.noaa.gov and optionally decodes
+ them into a human readable form.
+ This package is particularly useful is you want to quickly find out what the
+ weather is like in places all over the world and you do not need fancy GUIs.
 
