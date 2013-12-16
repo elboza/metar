@@ -37,7 +37,7 @@ dist:
 
 clean:
 	rm -rf ./${DIST_DIR}/*
-	rmdir ${DIST_DIR}
+	if [ -d ${DIST_DIR} ]; then rmdir ${DIST_DIR}; fi
 
 help:
 	@ echo "The following targets are available"
