@@ -46,8 +46,10 @@ sub main()
 	my $version=0;
 	my $debug=0;
 	my $forecast=0;
-	my $metar="http://weather.noaa.gov/pub/data/observations/metar/";
-	my $taf="http://weather.noaa.gov/pub/data/forecasts/taf/stations/";
+	#my $metar="http://weather.noaa.gov/pub/data/observations/metar/";
+	my $metar="http://tgftp.nws.noaa.gov/data/observations/metar/";
+	#my $taf="http://weather.noaa.gov/pub/data/forecasts/taf/stations/";
+	my $taf="http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/";
 	my ($xx,$line);
 	my @rr;
 
